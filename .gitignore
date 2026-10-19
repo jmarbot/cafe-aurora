@@ -1,0 +1,9 @@
+# design-taste-frontend: ignore generated output (inspector screenshots, reports),
+# but keep the direction sheet so the design can be reprinted and reproduced.
+.taste-skill/*
+!.taste-skill/direction.json
+
+# Archivos del sistema operativo y capturas de pruebas locales
+Thumbs.db
+.DS_Store
+.playwright-mcp/

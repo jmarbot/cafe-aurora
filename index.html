@@ -4,75 +4,196 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Café Aurora</title>
-  <meta name="description" content="Café Aurora: café de especialidad, repostería artesanal y un rincón tranquilo para empezar el día.">
+  <meta name="description" content="Café Aurora: café de especialidad tostado en lotes pequeños y horno encendido antes de abrir. Cafetería ficticia, contenido de demostración.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1c1c1c">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <a href="#inicio" class="logo">Café Aurora</a>
-    <nav>
-      <a href="#menu">Menú</a>
+  <header class="hero" id="inicio">
+    <nav class="hero-nav" aria-label="Principal">
+      <a href="#la-casa">La casa</a>
+      <a href="#visita">Visita</a>
+      <a href="#carta" class="btn" id="ver-carta">Ver la carta</a>
     </nav>
+
+    <figure class="hero-photo">
+      <img src="assets/web/chemex-1280.webp" width="1280" height="720"
+           srcset="assets/web/chemex-800.webp 800w, assets/web/chemex-1280.webp 1280w, assets/web/chemex-1920.webp 1920w"
+           sizes="(max-width: 900px) 100vw, 64vw"
+           alt="Cafetera de filtro de cristal con collar de madera, iluminada de lado en una sala oscura"
+           fetchpriority="high" decoding="async">
+    </figure>
+
+    <p class="hero-lead">
+      Café de especialidad tostado en lotes pequeños y horno encendido antes de abrir.
+      Desde las siete de la mañana.
+    </p>
+
+    <h1 class="hero-name">café <br class="br-phone">aurora</h1>
   </header>
 
   <main>
-    <section id="inicio" class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Café de especialidad · Desde 2026</p>
-        <h1>Café Aurora</h1>
-        <p class="hero-text">
-          Un rincón tranquilo donde cada taza se prepara con calma.
-          Granos tostados en pequeños lotes, repostería artesanal
-          y la luz suave de la mañana.
-        </p>
-        <a href="#menu" class="btn" id="ver-menu">Ver menú</a>
+    <section class="carta" id="carta" tabindex="-1" aria-labelledby="carta-titulo">
+      <div class="carta-head">
+        <h2 id="carta-titulo">La carta</h2>
+        <nav class="carta-index" aria-label="Grupos de la carta">
+          <a href="#g-cafe">Café</a>
+          <a href="#g-leche">Con leche</a>
+          <a href="#g-sin-cafe">Sin café</a>
+          <a href="#g-horno">Del horno</a>
+          <a href="#g-desayuno">Para empezar el día</a>
+        </nav>
+        <p class="carta-note">Precios de demostración: Café Aurora es una cafetería ficticia.</p>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="sun"></div>
-        <div class="cup">
-          <div class="steam s1"></div>
-          <div class="steam s2"></div>
-          <div class="steam s3"></div>
-          <div class="cup-body"></div>
-          <div class="cup-handle"></div>
-          <div class="saucer"></div>
-        </div>
-      </div>
+
+      <section class="grupo" id="g-cafe" tabindex="-1" aria-labelledby="g-cafe-titulo">
+        <h3 id="g-cafe-titulo">Café</h3>
+        <ul>
+          <li><span class="nombre">Espresso Aurora</span><span class="desc">Mezcla de la casa, cacao y caramelo</span><span class="precio">2,20 €</span></li>
+          <li><span class="nombre">Espresso doble</span><span class="precio">2,80 €</span></li>
+          <li><span class="nombre">Cortado</span><span class="precio">2,40 €</span></li>
+          <li><span class="nombre">Americano</span><span class="precio">2,60 €</span></li>
+          <li><span class="nombre">Filtro de temporada</span><span class="desc">Método V60, origen que cambia cada semana</span><span class="precio">3,50 €</span></li>
+        </ul>
+      </section>
+
+      <section class="grupo" id="g-leche" tabindex="-1" aria-labelledby="g-leche-titulo">
+        <h3 id="g-leche-titulo">Con leche</h3>
+        <ul>
+          <li><span class="nombre">Café con leche</span><span class="precio">2,60 €</span></li>
+          <li><span class="nombre">Cappuccino</span><span class="precio">3,20 €</span></li>
+          <li><span class="nombre">Flat white</span><span class="desc">Espresso doble y leche texturizada</span><span class="precio">3,40 €</span></li>
+          <li><span class="nombre">Latte de vainilla</span><span class="desc">Vainilla natural</span><span class="precio">3,80 €</span></li>
+          <li><span class="nombre">Bebida vegetal</span><span class="desc">Avena o almendra, en cualquier café</span><span class="precio">+0,40 €</span></li>
+        </ul>
+      </section>
+
+      <section class="grupo" id="g-sin-cafe" tabindex="-1" aria-labelledby="g-sin-cafe-titulo">
+        <h3 id="g-sin-cafe-titulo">Sin café</h3>
+        <ul>
+          <li><span class="nombre">Chocolate a la taza</span><span class="precio">3,50 €</span></li>
+          <li><span class="nombre">Té de hoja</span><span class="desc">Negro, verde o rooibos</span><span class="precio">2,80 €</span></li>
+          <li><span class="nombre">Zumo de naranja</span><span class="desc">Recién exprimido</span><span class="precio">3,60 €</span></li>
+        </ul>
+      </section>
+
+      <section class="grupo" id="g-horno" tabindex="-1" aria-labelledby="g-horno-titulo">
+        <h3 id="g-horno-titulo">Del horno</h3>
+        <ul>
+          <li><span class="nombre">Croissant de mantequilla</span><span class="precio">2,50 €</span></li>
+          <li><span class="nombre">Pain au chocolat</span><span class="precio">2,80 €</span></li>
+          <li><span class="nombre">Bollo de canela y cardamomo</span><span class="precio">3,20 €</span></li>
+          <li><span class="nombre">Bizcocho del día</span><span class="desc">Porción</span><span class="precio">3,00 €</span></li>
+        </ul>
+      </section>
+
+      <section class="grupo" id="g-desayuno" tabindex="-1" aria-labelledby="g-desayuno-titulo">
+        <h3 id="g-desayuno-titulo">Para empezar el día</h3>
+        <ul>
+          <li><span class="nombre">Tostada de masa madre</span><span class="desc">Tomate y aceite de oliva</span><span class="precio">3,80 €</span></li>
+          <li><span class="nombre">Tostada de aguacate</span><span class="desc">Con huevo</span><span class="precio">7,50 €</span></li>
+          <li><span class="nombre">Yogur con granola de la casa</span><span class="desc">Fruta de temporada</span><span class="precio">5,50 €</span></li>
+          <li><span class="nombre">Desayuno Aurora</span><span class="desc">Café, croissant y zumo</span><span class="precio">7,00 €</span></li>
+        </ul>
+      </section>
     </section>
 
-    <section id="menu" class="menu">
-      <div class="menu-header">
-        <p class="eyebrow">Nuestra carta</p>
-        <h2>Favoritos de la casa</h2>
+    <section class="casa" id="la-casa" tabindex="-1" aria-labelledby="casa-titulo">
+      <div class="casa-head">
+        <h2 id="casa-titulo">Cómo se hace</h2>
+        <p class="casa-intro">Abrimos cuando todavía es de noche. A las siete ya hay café recién molido, pan en la vitrina y sitio junto a la ventana.</p>
       </div>
 
-      <div class="products">
-        <article class="product">
-          <span class="product-icon" aria-hidden="true">☕</span>
-          <h3>Espresso Aurora</h3>
-          <p>Mezcla de la casa con notas de cacao y caramelo. Intenso y equilibrado.</p>
-          <span class="price">2,20 €</span>
-        </article>
+      <article class="casa-item">
+        <figure>
+          <img src="assets/web/casa-tueste-960.webp" width="1440" height="960" loading="lazy" decoding="async"
+               srcset="assets/web/casa-tueste-640.webp 640w, assets/web/casa-tueste-960.webp 960w, assets/web/casa-tueste-1440.webp 1440w"
+               sizes="(max-width: 900px) calc(100vw - 40px), 56vw"
+               alt="Granos de café tostado iluminados de lado">
+          <figcaption>Imagen ilustrativa, no del local.</figcaption>
+        </figure>
+        <div class="casa-text">
+          <h3>Tueste en lotes pequeños</h3>
+          <p>Tostamos cada semana, en tandas de pocos kilos, para servir el grano en su mejor momento.</p>
+        </div>
+      </article>
 
-        <article class="product">
-          <span class="product-icon" aria-hidden="true">🥛</span>
-          <h3>Latte de vainilla</h3>
-          <p>Espresso doble, leche cremosa y un toque de vainilla natural.</p>
-          <span class="price">3,80 €</span>
-        </article>
+      <article class="casa-item">
+        <figure>
+          <img src="assets/web/casa-horno-960.webp" width="1440" height="1080" loading="lazy" decoding="async"
+               srcset="assets/web/casa-horno-640.webp 640w, assets/web/casa-horno-960.webp 960w, assets/web/casa-horno-1440.webp 1440w"
+               sizes="(max-width: 900px) calc(100vw - 40px), 56vw"
+               alt="Panecillos recién horneados sobre bandejas de horno">
+          <figcaption>Imagen ilustrativa, no del local.</figcaption>
+        </figure>
+        <div class="casa-text">
+          <h3>El horno, antes que la puerta</h3>
+          <p>La masa se prepara la víspera y se hornea de madrugada.</p>
+        </div>
+      </article>
 
-        <article class="product">
-          <span class="product-icon" aria-hidden="true">🥐</span>
-          <h3>Croissant de mantequilla</h3>
-          <p>Hojaldre artesanal horneado cada mañana. Crujiente por fuera, tierno por dentro.</p>
-          <span class="price">2,50 €</span>
-        </article>
+      <article class="casa-item">
+        <figure>
+          <img src="assets/web/casa-espresso-960.webp" width="1440" height="960" loading="lazy" decoding="async"
+               srcset="assets/web/casa-espresso-640.webp 640w, assets/web/casa-espresso-960.webp 960w, assets/web/casa-espresso-1440.webp 1440w"
+               sizes="(max-width: 900px) calc(100vw - 40px), 56vw"
+               alt="Café espresso en un vaso de cristal con asa de acero, sobre una mesa de madera">
+          <figcaption>Imagen ilustrativa, no del local.</figcaption>
+        </figure>
+        <div class="casa-text">
+          <h3>Una mezcla de la casa</h3>
+          <p>El Espresso Aurora, con notas de cacao y caramelo, es la base de toda la carta.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="visita" id="visita" tabindex="-1" aria-labelledby="visita-titulo">
+      <div class="visita-card">
+        <h2 id="visita-titulo">Ven temprano</h2>
+        <dl class="horario">
+          <div><dt>Lunes a viernes</dt><dd>7:00–19:00</dd></div>
+          <div><dt>Sábado</dt><dd>8:00–20:00</dd></div>
+          <div><dt>Domingo</dt><dd>8:00–14:00</dd></div>
+        </dl>
+        <p>Ubicación: próximamente.</p>
+        <p class="visita-aviso">Café Aurora es un proyecto ficticio. Horarios, carta y precios son de demostración.</p>
       </div>
+
+      <figure class="visita-cuadro">
+        <img src="assets/web/visita-amanecer-1280.webp" width="1920" height="1430" loading="lazy" decoding="async"
+             srcset="assets/web/visita-amanecer-800.webp 800w, assets/web/visita-amanecer-1280.webp 1280w, assets/web/visita-amanecer-1920.webp 1920w"
+             sizes="100vw"
+             alt="Pintura de un amanecer sobre tejados nevados con chimeneas, en tonos azules y un sol anaranjado en el horizonte">
+        <figcaption>Eugène Jansson, <cite>Amanecer sobre los tejados. Motivo de Estocolmo</cite>, 1903. Nationalmuseum, Estocolmo. Dominio público.</figcaption>
+      </figure>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Café Aurora · Cafetería ficticia · Web piloto</p>
+    <div class="footer-about">
+      <p class="footer-name">Café Aurora</p>
+      <p>Proyecto ficticio. Carta, precios y horarios de demostración.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Secciones">
+      <a href="#carta">Carta</a>
+      <a href="#la-casa">La casa</a>
+      <a href="#visita">Visita</a>
+    </nav>
+    <div class="credits">
+      <p>Fotografías de
+        <a href="https://commons.wikimedia.org/wiki/File:Chemex_(Unsplash).jpg">Zachary Newton</a>,
+        <a href="https://wordpress.org/photos/photo/12961feeb9/">Chuck Grimmett</a>,
+        <a href="https://commons.wikimedia.org/wiki/File:Bread-rolls.jpg">Kerstin Riemer</a> y
+        <a href="https://wordpress.org/photos/photo/16065c3b54/">Nilo Velez</a>, con licencia
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.
+        Pintura de <a href="https://commons.wikimedia.org/wiki/File:Sunrise_over_the_Rooftops._Motif_from_Stockholm_(Eug%C3%A8ne_Jansson)_-_Nationalmuseum_-_18872.tif">Eugène Jansson</a>, 1903, dominio público.</p>
+      <p>© <span id="year">2026</span></p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
